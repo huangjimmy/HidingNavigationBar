@@ -36,6 +36,9 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, weak) UIView *extensionView;
 
+@property (nonatomic, weak) UIView *scrollViewHeaderView;
+@property (nonatomic, weak) UIView *scrollViewFooterView;
+
 @property (nonatomic, assign) CGFloat expansionResistance;
 @property (nonatomic, assign) CGFloat contractionResistance;
 
