@@ -10,6 +10,8 @@
 
 @interface HidingNavigationBarManager()
 
+@property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
+
 - (BOOL)isViewControllerVisible;
 - (CGFloat)statusBarHeight;
 - (BOOL)shouldHandlesScrolling;
@@ -45,9 +47,13 @@
         
         [viewController.tabBarController tabBar];
         
-        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-        panGesture.delegate = self;
-        [scrollView addGestureRecognizer:panGesture];
+        if (scrollView) {
+            UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+            panGesture.delegate = self;
+            [scrollView addGestureRecognizer:panGesture];
+            self.panGesture = panGesture;
+        }
+        
         
         __weak typeof(self) myself = self;
         self.navBarController.expandedCenter = ^CGPoint(UIView *view){
@@ -65,6 +71,21 @@
     }
     
     return self;
+}
+
+- (void)setScrollView:(UIScrollView *)scrollView{
+    if (_scrollView != scrollView) {
+        if (self.panGesture) {
+            [self.scrollView removeGestureRecognizer:self.panGesture];
+            self.panGesture = nil;
+        }
+        _scrollView = scrollView;
+        
+        UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+        panGesture.delegate = self;
+        [scrollView addGestureRecognizer:panGesture];
+        self.panGesture = panGesture;
+    }
 }
 
 - (void)dealloc{
