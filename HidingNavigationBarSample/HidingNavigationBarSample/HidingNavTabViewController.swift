@@ -23,11 +23,18 @@ class HidingNavTabViewController: UIViewController, UITableViewDataSource, UITab
 		tableView.delegate = self
 		tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: identifier)
 		view.addSubview(tableView)
+        
+        let headerView = UIView(frame: CGRectMake(0, 0, self.view.bounds.size.width, 40))
+        headerView.backgroundColor = UIColor.redColor()
+        headerView.layer.borderWidth = 2;
 		
 		let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: Selector("cancelButtonTouched"))
 		navigationItem.leftBarButtonItem = cancelButton
 		
 		hidingNavBarManager = HidingNavigationBarManager(viewController: self, scrollView: tableView)
+        
+        hidingNavBarManager?.addExtensionView(headerView)
+        
 		if let tabBar = navigationController?.tabBarController?.tabBar {
 			hidingNavBarManager?.manageBottomBar(tabBar)
 			tabBar.barTintColor = UIColor(white: 230/255, alpha: 1)
