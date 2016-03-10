@@ -26,6 +26,7 @@
 		7FE14D791C9121D40022D02B /* HidingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FE14D771C9121D40022D02B /* HidingViewController.h */; };
 		7FE14D7A1C9121D40022D02B /* HidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE14D781C9121D40022D02B /* HidingViewController.m */; };
 		7FE14D7B1C9121D40022D02B /* HidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE14D781C9121D40022D02B /* HidingViewController.m */; };
+		BF1726C71C91BC4F00AFF2C0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1726C61C91BC4F00AFF2C0 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		7FE14D771C9121D40022D02B /* HidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HidingViewController.h; sourceTree = "<group>"; };
 		7FE14D781C9121D40022D02B /* HidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HidingViewController.m; sourceTree = "<group>"; };
 		7FE14D7C1C915C820022D02B /* HidingNavigationBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HidingNavigationBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF1726C51C91BC4F00AFF2C0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		BF1726C61C91BC4F00AFF2C0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				6A6570F81AF3F71100A6CFE4 /* LaunchScreen.xib */,
 				6A6570EB1AF3F71100A6CFE4 /* Supporting Files */,
 				7FE14D7C1C915C820022D02B /* HidingNavigationBar-Bridging-Header.h */,
+				BF1726C51C91BC4F00AFF2C0 /* TestViewController.h */,
+				BF1726C61C91BC4F00AFF2C0 /* TestViewController.m */,
 			);
 			path = HidingNavigationBarSample;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				6A6570EE1AF3F71100A6CFE4 /* AppDelegate.swift in Sources */,
 				7FE14D7B1C9121D40022D02B /* HidingViewController.m in Sources */,
 				7FE14D761C9121A60022D02B /* HidingNavigationBarManager.m in Sources */,
+				BF1726C71C91BC4F00AFF2C0 /* TestViewController.m in Sources */,
 				6A6571121AF3F8D900A6CFE4 /* HidingNavViewController.swift in Sources */,
 				6A65711E1AF3FDB600A6CFE4 /* HidingNavExtensionViewController.swift in Sources */,
 			);
@@ -548,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = HidingNavigationBarSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -559,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = HidingNavigationBarSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

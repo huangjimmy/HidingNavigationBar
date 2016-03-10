@@ -9,7 +9,7 @@
 #ifndef HidingNavigationBar_Bridging_Header_h
 #define HidingNavigationBar_Bridging_Header_h
 
-#import "/Users/huangshaojun/Documents/ios/HidingNavigationBar/HidingNavigationBar/HidingNavigationBarManager.h"
-#import "/Users/huangshaojun/Documents/ios/HidingNavigationBar/HidingNavigationBar/HidingViewController.h"
+#import "HidingNavigationBarManager.h"
+#import "HidingViewController.h"
 
 #endif /* HidingNavigationBar_Bridging_Header_h */

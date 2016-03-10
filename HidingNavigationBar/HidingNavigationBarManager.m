@@ -92,6 +92,24 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)manageTopBar:(UIView*)view{
+    __weak typeof(self) myself = self;
+    
+    self.navBarController = [[HidingViewController alloc] init:view];
+    self.navBarController.contractsUpwards = YES;
+    CGFloat viewTop = view.frame.origin.y;
+    self.navBarController.expandedCenter = ^CGPoint(UIView *view){
+        
+        if (viewTop == 0) {
+            return CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
+        }
+        return CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds)+myself.statusBarHeight);
+    };
+    
+    self.navBarController.child = self.extensionController;
+    self.navBarController.alphaFadeEnabled = YES;
+}
+
 - (void)manageBottomBar:(UIView *)view{
     
     __weak typeof(self) myself = self;

@@ -104,6 +104,7 @@
         newYCenter = MIN(MAX(self.expandedCenterValue.y, newYOffset), self.contractedCenterValue.y);
     }
     
+    self.expectedYCenter = newYCenter;
     self.view.center = CGPointMake(self.view.center.x, newYCenter);
     
     if (self.alphaFadeEnabled) {

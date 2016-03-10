@@ -59,6 +59,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) HidingNavigationBarState previousState;
 
 - (id)initWithViewController:(UIViewController*)viewController scrollView:(UIScrollView*)scrollView;
+//If you have a custom top navigation bar other than system default navigation bar
+- (void)manageTopBar:(UIView*)view;
 - (void)manageBottomBar:(UIView*)view;
 - (void)addExtensionView:(UIView*)view;
 - (void)viewWillAppear:(BOOL)animated;

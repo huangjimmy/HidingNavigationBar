@@ -17,6 +17,7 @@
 
 @property (nonatomic, copy) CGPoint(^expandedCenter)(UIView*);
 
+@property (nonatomic, assign) CGFloat expectedYCenter;
 @property (nonatomic, assign) BOOL alphaFadeEnabled;
 @property (nonatomic, assign) BOOL contractsUpwards;
 
