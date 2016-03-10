@@ -7,9 +7,8 @@ Pod::Spec.new do |s|
   s.homepage = "https://git.yidian-inc.com:8021/ios//HidingNavigationBar"
   s.author = { "huang shaojun" => "huangshaojun@ydian-inc.com" }
   s.source = { :git => 'https://git.yidian-inc.com:8021/ios/HidingNavigationBar.git', :tag => s.version.to_s }
-
   s.ios.deployment_target = '7.0'
-  s.requires_arc = 'true'
+  s.framework    = 'UIKit'
   s.source_files = 'HidingNavigationBar/**/*.{h,m}'
 
 end
