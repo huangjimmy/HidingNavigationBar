@@ -1,0 +1,15 @@
+//
+//  HidingNavigationBar-Bridging-Header.h
+//  HidingNavigationBarSample
+//
+//  Created by huangshaojun on 3/10/16.
+//  Copyright © 2016 Tristan Himmelman. All rights reserved.
+//
+
+#ifndef HidingNavigationBar_Bridging_Header_h
+#define HidingNavigationBar_Bridging_Header_h
+
+#import "/Users/huangshaojun/Documents/ios/HidingNavigationBar/HidingNavigationBar/HidingNavigationBarManager.h"
+#import "/Users/huangshaojun/Documents/ios/HidingNavigationBar/HidingNavigationBar/HidingViewController.h"
+
+#endif /* HidingNavigationBar_Bridging_Header_h */
