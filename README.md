@@ -3,7 +3,7 @@ HidingNavigationBar
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/HidingNavigationBar.svg)](https://github.com/tristanhimmelman/HidingNavigationBar)
 
-An easy to use library (originally written in Swift, converted to ObjC by 黄少君 huangshaojun@yidian-inc.com) that manages hiding and showing a navigation bar as a user scrolls.
+An easy to use library (originally written in Swift, converted to ObjC by 黄少君 huangjimmy@github) that manages hiding and showing a navigation bar as a user scrolls.
 - [Features](#features)
 - [Usage](#usage)
 - [Customization](#customization)
